@@ -4,8 +4,10 @@ The `biometric_access` plugin enables biometric-based authentication with seamle
 
 
 ## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+<div > 
+<img src="example/screenshots/WebView.jpeg" width="500vw" height="500vw" />
+<img src="example/screenshots/mobileView.png" width="300vw" height="500vw" />
+<div/>
 
 ## Supported Platforms
 - Android (Under development)
