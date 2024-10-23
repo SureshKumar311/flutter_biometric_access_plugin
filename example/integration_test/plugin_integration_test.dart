@@ -6,14 +6,21 @@
 // For more information about Flutter integration tests, please see
 // https://flutter.dev/to/integration-testing
 
-
+import 'package:biometric_access/biometric_access.dart';
+import "package:biometric_access_example/main.dart" as app;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
+void main() async {
+  final binding = IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
-import 'package:biometric_access/biometric_access.dart';
+  testWidgets('screenshot', (WidgetTester tester) async {
+    // Build the app.
+    app.main();
 
-void main() {
-  IntegrationTestWidgetsFlutterBinding.ensureInitialized();
+    // Trigger a frame.
+    await tester.pumpAndSettle();
+    await binding.takeScreenshot('screenshot-1');
+  });
 
   testWidgets('getPlatformVersion test', (WidgetTester tester) async {
     final BiometricAccess plugin = BiometricAccess();
