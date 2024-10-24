@@ -1,5 +1,5 @@
 name: biometric_access
-description: "A new Flutter plugin project."
+description: "The Biometric Access Plugin enables biometric-based authentication with seamless integration of different biometric devices"
 version: 0.0.1
 homepage: https://github.com/SureshKumar311/flutter_biometric_access_plugin.git
 
