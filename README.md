@@ -1,8 +1,6 @@
 # Biometric Access
 
-The `biometric_access` plugin enables biometric-based authentication with seamless integration of biometric devices and provides an easy-to-use API for developers
-
-
+The Biometric Access plugin allows for seamless integration of various biometric devices, including fingerprint and IRIS scanners, all within a single plugin. It provides developers with an easy-to-use API to implement secure and efficient biometric-based authentication across multiple supported devices
 ## Screenshots
 <div > 
 <img src="example/screenshots/WebView.jpeg" width="500vw" height="500vw" />
