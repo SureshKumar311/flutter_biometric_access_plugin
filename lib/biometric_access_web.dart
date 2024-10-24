@@ -43,8 +43,7 @@ class BiometricAccessWeb extends BiometricAccessPlatform {
     //Scan port from 11100 to 11120
     pluginDebug("\nScanning AVDM from port 11100 to 11120, this will take few Seconds",
         usePrint: true);
-    for (var i = 11100; i <= 11104; i++) {
-      ///TODO [ port 11104 ] is only for Testing
+    for (var i = 11100; i <= 11120; i++) {
       final client =
           await httpClient.openUrl("RDSERVICE", Uri.parse("http://127.0.0.1:$i"));
       client.headers.set("Content-Type", "text/xml; charset=utf-8");

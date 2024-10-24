@@ -94,7 +94,7 @@ class _MyAppState extends State<MyApp> {
                   setState(() {});
                   showLoader = false;
                 } on RDClientNotFound catch (err)  {
-                  print(err.toJson());
+                  debugPrint(err.toJson().toString());
                 } 
                 catch (e) {
                   customToast(e.toString());
@@ -115,7 +115,7 @@ class _MyAppState extends State<MyApp> {
                 try {
                   setState(() => showLoader = true);
                   final data = await _biometricAccessPlugin.getDeviceInfoAsObject();
-                  resultData = (data.$2?.toJson().toString());
+                  resultData = (data.$2.toJson().toString());
                   await copyToClipboard(resultData);
                 } catch (e) {
                   customToast(e.toString());
