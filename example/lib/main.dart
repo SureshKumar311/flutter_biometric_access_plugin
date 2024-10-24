@@ -89,16 +89,16 @@ class _MyAppState extends State<MyApp> {
               customButton("Discover RDService", () async {
                 setState(() => showLoader = true);
                 try {
-                   _biometricAccessPlugin.setRDService=null;
+                  _biometricAccessPlugin.setRDService = RdServiceModel(port: 100100);
                   rdServiceList = (await _biometricAccessPlugin.discoverRDServices());
-                  setState(() {});
-                  showLoader = false;
-                } on RDClientNotFound catch (err)  {
+                } on RDClientNotFound catch (err) {
                   print(err.toJson());
-                } 
-                catch (e) {
+                } catch (e) {
                   customToast(e.toString());
                 }
+
+                setState(() {});
+                showLoader = false;
               }),
               customButton("DeviceInfo as XML", () async {
                 try {
